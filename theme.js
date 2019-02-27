@@ -1,8 +1,15 @@
-import theme from 'mdx-deck/themes'
+import {future as theme} from 'mdx-deck/themes'
 
 export default {
   ...theme,
-
+  colors: {
+    ...theme.colors,
+    
+  },
+  css: {
+    ...theme.css,
+    textAlign: 'left'
+  }
   // Customize your presentation theme here.
   //
   // Read the docs for more info:
