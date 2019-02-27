@@ -115,7 +115,7 @@ export { default as theme } from './theme'
 ---
 export default Split
 
-![](mock.png)
+<img src={require("file-loader!./mock.png")}/>
 
 <Appear>
 <pre>users/[id]/</pre>
@@ -135,7 +135,7 @@ export default Split
 ---
 export default Split
 
-![](mock.png)
+<img src={require("file-loader!./mock.png")}/>
 
 ```json
 {
@@ -169,18 +169,64 @@ export default Split
 - schema
   - the 'contract'
   - defined by SDL
-
-- resolver
-
+  - strict types
 - resolver functions 
-
+  - each defined non-scalar type needs a coresponding resolver function 
 ---
+### Schema exapmle
+---
+export default Split
 
+```
+Schema {
+  types
+  relations
+  ...
+}
+```
+
+```
+Query {
+
+}
+```
+---
+### Resolver exapmle
+---
+export default Split
+
+```
+Schema {
+  types
+  relations
+  ...
+}
+```
+
+```
+function Schema() {
+  i'm a resolver
+}
+```
+
+```notes
+```
+---
 ### Some specific concepts
+
+- query, mutation, subscription
+- stitching
+- data loader
+- fragments
+- introspection
 
 ---
 
 ## Resources
+
+- graphql.org/learn
+- howtographql.com
+- apollographql.com/docs/ios/
 
 ---
 
