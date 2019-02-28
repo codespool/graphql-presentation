@@ -1,4 +1,6 @@
 import {future as theme} from 'mdx-deck/themes'
+import xonokai from 'react-syntax-highlighter/styles/prism/xonokai'
+import prismGraphql from 'react-syntax-highlighter/languages/prism/graphql'
 
 export default {
   ...theme,
@@ -8,7 +10,13 @@ export default {
   },
   css: {
     ...theme.css,
-    textAlign: 'left'
+    textAlign: 'left',
+  },
+  prism: {
+    style: xonokai,
+    languages: {
+      graphql: prismGraphql
+    }
   }
   // Customize your presentation theme here.
   //
