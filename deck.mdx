@@ -173,7 +173,7 @@ export default Split
   - defined by SDL
   - strict types
 - resolver functions 
-  - each defined type needs a coresponding resolver function
+  - each defined type needs a corresponding resolver function
 ---
 ### Simple exapmle
 ---
@@ -260,7 +260,27 @@ async function getPerson(parent, args, context) {
 </ul>
 
 ```notes
+- query, mut., sub. 
+  - root types
+  - parallel to get, post-put-patch-delete
+  - sub opens a live channel
 
+- stitching
+  - include a remote schema and use it as your own
+  - f.ex provide contentful or any other CMS (composing)
+- loader
+  - depending on implementation and resource type, batch requests
+- fragments
+  - named part of query that repeats
+- introspection
+  - https://graphql.github.io/swapi-graphql
+
+- authorization
+  - gql just a spec
+  - http server underneeth
+  - possible (and tempting) to do in resolvers
+  - better in middleware, or resource
+  - concept of resource: api or db handler
 ```
 ---
 ## Summary
@@ -298,6 +318,15 @@ async function getPerson(parent, args, context) {
 
 ---
 
+## Questions?
+
+---
 ### Thank you
 
 #### The End
+
+```notes
+- thnx to Steven for having me here
+- thank you all for listening
+- hope I've inspired some of you to try it out 
+```
